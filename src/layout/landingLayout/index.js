@@ -1,17 +1,17 @@
 import React from "react";
 
 import "./styles.scss";
-// import Header from "../../components/ui/header";
-// import Footer from "../../components/ui/footer";
+import Header from "../../components/ui/header";
+import Footer from "../../components/ui/footer";
 
 const LandingLayout = ({ children }) => {
   return (
     <div className="landing-layout">
-      {/* <Header /> */}
+      <Header />
 
       <main className="main">{children}</main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

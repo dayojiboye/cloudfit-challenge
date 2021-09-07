@@ -65,3 +65,26 @@ button {
   color: inherit;
   cursor: pointer;
 }
+
+input,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  color: var(--text-primary);
+  border: 1px solid var(--fade-border);
+  border-radius: 4px;
+  background: var(--fade);
+
+  &::placeholder {
+    color: var(--text-input);
+  }
+}
+
+select {
+  cursor: pointer;
+}
+
+// 1114px 1023px 900px 700px
