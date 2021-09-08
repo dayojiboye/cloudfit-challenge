@@ -19,7 +19,7 @@ body {
   text-rendering: optimizeLegibility;
   width: var(--full);
   height: var(--full);
-  background: var(--white);
+  background: var(--main-bg);
   color: var(--text-primary);
 }
 
@@ -85,6 +85,10 @@ select {
 
 select {
   cursor: pointer;
+}
+
+img {
+  object-fit: cover;
 }
 
 // 1114px 1023px 900px 700px
