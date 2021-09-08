@@ -8,9 +8,23 @@
   height: 89px;
   border-bottom: 1px solid var(--text-input);
 
+  @media (max-width: 1271px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    align-items: stretch;
+  }
+
   .header-alert {
     width: 434px;
-    height: 40px;
+    max-width: var(--full);
+    padding: 10px 16px;
+    min-height: 40px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +34,10 @@
     > p {
       color: var(--white);
       font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      margin-bottom: 16px;
     }
   }
 

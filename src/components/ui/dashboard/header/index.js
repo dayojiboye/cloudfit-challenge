@@ -18,7 +18,7 @@ const header = () => {
             />
           </div>
 
-          <Dropdown btnText="Andie kane" />
+          <Dropdown btnText="Andie Kane" />
         </div>
       </div>
     </header>

@@ -4,3 +4,6 @@ export { ReactComponent as TransactionsSvg } from "./transaction.svg";
 export { ReactComponent as ShareSvg } from "./share.svg";
 export { ReactComponent as DownloadSvg } from "./download.svg";
 export { ReactComponent as ChevronDownSvg } from "./chevron-down.svg";
+export { ReactComponent as InvestSvg } from "./invest-small.svg";
+export { ReactComponent as EllipseLarge } from "./Ellipse-large.svg";
+export { ReactComponent as EllipseSmall } from "./Ellipse-small.svg";

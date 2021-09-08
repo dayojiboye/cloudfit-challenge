@@ -1,3 +1,5 @@
+@import "../../node_modules/hamburgers/dist/hamburgers";
+
 *,
 ::before,
 ::after {
@@ -40,6 +42,9 @@ body._fixed {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   line-height: 1.4;
   margin: 0;
@@ -91,4 +96,61 @@ img {
   object-fit: cover;
 }
 
-// 1114px 1023px 900px 700px
+.backdrop {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  width: var(--full);
+  height: var(--full);
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+
+  @media (min-width: 1272px) {
+    display: none;
+  }
+
+  &.show {
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+// hamburger
+
+.hamburger-box {
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 30px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: var(--text-primary);
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: var(--text-primary);
+  width: 30px;
+  height: 2px;
+  margin: 0;
+}
+
+.hamburger:hover {
+  opacity: 1 !important;
+}
+
+// 1271px 1114px 1023px 900px 700px 374px

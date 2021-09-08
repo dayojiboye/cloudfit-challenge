@@ -1,0 +1,279 @@
+.dashboard-main {
+  width: var(--full);
+  padding: 53px 113px 53px 16px;
+
+  @media (max-width: 1271px) {
+    padding: 53px 16px;
+  }
+
+  .dash-lead {
+    width: var(--full);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    h1 {
+      font-size: 34px;
+    }
+
+    .invest-box {
+      width: 203px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 20px;
+      background-color: var(--orange);
+      border-radius: 4px;
+
+      @media (max-width: 900px) {
+        margin-top: 16px;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: var(--white);
+      }
+
+      .invest-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+
+        > svg {
+          height: 10px;
+          width: 13px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .dash-card-grid {
+    width: var(--full);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 8px;
+    margin: 37px 0;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 16px 0;
+    }
+
+    > .dash-card {
+      padding: 27px 25px;
+      color: var(--white);
+      border-radius: 5px;
+      position: relative;
+
+      @media (max-width: 900px) {
+        max-width: 700px;
+        width: var(--full);
+      }
+
+      &.total-invested {
+        background: var(--deep-gold);
+      }
+
+      &.total-earned {
+        background: #0b638d;
+      }
+
+      &.total-payoff {
+        background: var(--text-input);
+      }
+
+      .dash-card-body {
+        position: relative;
+        z-index: 20;
+
+        h3 {
+          font-size: 14px;
+        }
+
+        > .amount {
+          font-size: 24px;
+          margin: 8px 0 15px;
+        }
+
+        > span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .latest-investments {
+    width: var(--full);
+
+    > h2 {
+      font-size: 16px;
+    }
+
+    .investment-grid {
+      display: flex;
+      margin-top: 18px;
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      .investment-info-card {
+        flex: 0.4;
+        border-radius: 5px;
+        background: var(--white);
+        padding-bottom: 16px;
+
+        @media (max-width: 900px) {
+          max-width: 700px;
+          width: var(--full);
+        }
+
+        .card-img {
+          border-radius: 5px;
+          background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url("../../assets/handshake.png") no-repeat center;
+          background-size: cover;
+          width: var(--full);
+          height: 158px;
+          padding: 24px 20px;
+
+          .card-header {
+            width: var(--full);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: var(--full);
+
+            .fixed-plan-tag {
+              width: 92px;
+              height: 25px;
+              padding-left: 11px;
+              background: rgba(0, 0, 0, 0.7);
+              border-radius: 5px;
+              display: flex;
+              align-items: center;
+
+              span {
+                font-size: 12px;
+                color: var(--white);
+              }
+            }
+
+            > .investment-card-header {
+              width: var(--full);
+              color: var(--white);
+
+              h3 {
+                font-size: 16px;
+              }
+
+              p {
+                font-size: 12px;
+                margin-top: 16px;
+                line-height: 0;
+              }
+            }
+          }
+        }
+
+        .card-body {
+          width: var(--full);
+          padding: 13px 25px;
+
+          .interest-info,
+          .investors-info {
+            h4 {
+              color: var(--text-input);
+              font-size: 12px;
+              margin-bottom: 4px;
+            }
+
+            span {
+              color: var(--dark-fade);
+              font-size: 14px;
+            }
+          }
+
+          .investable-amount-info {
+            margin: 20px 0;
+
+            h4 {
+              color: var(--text-input);
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+
+            .investable-amount {
+              display: flex;
+              align-items: center;
+
+              @media (max-width: 374px) {
+                flex-direction: column;
+                align-items: stretch;
+              }
+
+              .exact-amount {
+                font-size: 14px;
+                color: #222222;
+              }
+
+              > .center {
+                color: var(--text-input);
+                font-size: 12px;
+                margin: 0 32px;
+                font-weight: 700;
+
+                @media (max-width: 374px) {
+                  margin: 16px 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .investment-graph-container {
+        flex: 0.6;
+        padding: 25px 28px;
+        border-radius: 5px;
+        background: var(--white);
+        margin-left: 19px;
+
+        @media (max-width: 900px) {
+          max-width: 700px;
+          width: var(--full);
+          margin-left: 0;
+          margin-top: 16px;
+        }
+
+        .investment-graph-header {
+          width: var(--full);
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 25px;
+
+          @media (max-width: 900px) {
+            justify-content: center;
+            align-items: center;
+          }
+
+          h2 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

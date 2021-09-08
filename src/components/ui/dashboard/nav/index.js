@@ -10,9 +10,9 @@ import {
 } from "../../../../assets";
 import { NavLink } from "react-router-dom";
 
-const nav = () => {
+const nav = ({ open }) => {
   return (
-    <nav className="nav">
+    <nav className={`nav ${open ? "show" : ""}`}>
       <div className="nav__heading">
         <Logo />
       </div>

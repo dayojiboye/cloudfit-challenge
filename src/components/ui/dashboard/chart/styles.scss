@@ -1,0 +1,12 @@
+.chart {
+  width: var(--full);
+  height: auto;
+
+  .VictoryContainer {
+    svg {
+      tspan {
+        font-family: "Rubik", sans-serif !important;
+      }
+    }
+  }
+}

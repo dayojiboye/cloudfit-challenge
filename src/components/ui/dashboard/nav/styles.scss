@@ -21,6 +21,18 @@
     display: none;
   }
 
+  @media (max-width: 1271px) {
+    left: -200vw;
+    height: auto;
+    position: fixed;
+    top: 55px;
+    min-height: auto;
+
+    &.show {
+      left: 0;
+    }
+  }
+
   &__heading {
     width: fit-content;
     margin: 0 55px;
