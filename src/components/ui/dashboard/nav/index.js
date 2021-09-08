@@ -57,7 +57,7 @@ const nav = ({ open }) => {
       </div>
 
       <footer className="nav__footer">
-        <span>2019 | Copright - sfs Capital</span>
+        <span>2019 | Copyright - sfs Capital</span>
       </footer>
     </nav>
   );

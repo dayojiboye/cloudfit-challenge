@@ -3,6 +3,9 @@
   height: auto;
   position: relative;
   overflow-x: hidden;
+  max-width: var(--wrapper-max-width);
+  min-width: var(--wrapper-min-width);
+  margin: 0 auto;
 
   .main {
     width: var(--full);
